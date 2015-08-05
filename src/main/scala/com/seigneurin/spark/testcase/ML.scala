@@ -9,7 +9,7 @@ case class IndividualsWithLabel(individuals: String, label: Double)
 object ML extends App {
 
   val conf = new SparkConf()
-    .setMaster("local")
+    .setMaster("local[*]")
     .setAppName("testcase")
   val sc = new SparkContext(conf)
   val sqlContext = new SQLContext(sc)
